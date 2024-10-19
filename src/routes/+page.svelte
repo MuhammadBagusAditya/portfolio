@@ -7,6 +7,10 @@
   import Footer from "$lib/components/Home/Footer.svelte";
 </script>
 
+<svelte:head>
+  <title>My Portfolio - Muhammad Bagus Aditya</title>
+</svelte:head>
+
 <div>
   <Jumbotron />
   <About />

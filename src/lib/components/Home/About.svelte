@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Icon from "@iconify/svelte";
+  import { base } from "$app/paths";
+  import { about, profileImg } from "$lib/data/data.json";
 </script>
 
 <section class="bg-gray-100 dark:bg-gray-900" id="about">
@@ -12,17 +13,17 @@
       </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-[500px,_1fr] gap-3">
-      <div></div>
+    <div class="grid grid-cols-1 lg:grid-cols-[300px,_1fr] gap-x-12">
+      <div class="flex justify-center">
+        <img
+          src={base + profileImg}
+          alt="my profile"
+          class="w-full max-w-[16rem] rounded-lg mb-4"
+        />
+      </div>
 
-      <p class="text-base text-gray-700 text-justify">
-        Nama saya muhammad bagus aditya, seorang programmer freelancer lulusan
-        SMK Telekomunikasi Tunas Harapan yang sedang mencari ilmu di Universitas
-        Dian Nuswantoro (UDINUS) Semarang jurusan Sarjana Teknik Informatika.
-        Saya mahir dalam menggunakan laravel dan beberapa framework javascript
-        seperti vue js dan svelte js. Pernah mengikuti Lomba Kompetensi Siswa
-        dan meraih juara 2 di bidang Web Technologies tingkat Provinsi Jawa
-        Tengah.
+      <p class="lg:text-lg text-gray-700 text-justify">
+        {about}
       </p>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
+  import data from "$lib/data/data.json";
 </script>
 
 <section class="bg-gray-100 dark:bg-gray-900" id="projects">
@@ -16,81 +17,60 @@
     </div>
 
     <div class="grid gap-8 lg:grid-cols-2">
-      <article
-        class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-      >
-        <div class="flex justify-start items-center gap-3 mb-5 text-gray-500">
-          <span
-            class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800"
-          >
-            <Icon icon="mdi:xml" class="mr-1 w-3 h-3" />
-            Website
-          </span>
-
-          <span
-            class="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800"
-          >
-            <Icon icon="mdi:cancel" class="mr-1 w-3 h-3" />
-            Tidak Aktif
-          </span>
-        </div>
-        <h2
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+      {#each data.projects as project}
+        <article
+          class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
         >
-          <a href="https://merbabu360.com" target="_blank">Website Merbabu360</a
-          >
-        </h2>
-        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-          Website untuk layanan booking villa dan camping. Dalam pembuatan
-          website ini, saya berkonstribusi di bagian backend, dashboard, dan
-          pemesanan villa.
-        </p>
-        <div class="flex justify-between items-center">
-          <a
-            href="https://merbabu360.com"
-            class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            target="_blank"
-          >
-            Cek website
-            <Icon icon="mdi:arrow-right" class="ml-2 w-4 h-4" />
-          </a>
-        </div>
-      </article>
+          <div class="flex justify-start items-center gap-3 mb-5 text-gray-500">
+            <span
+              class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800"
+            >
+              {#if project.status.type === "website"}
+                <Icon icon="mdi:xml" class="mr-1 w-3 h-3" />
+                Website
+              {/if}
+            </span>
 
-      <article
-        class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-      >
-        <div class="flex justify-between items-center mb-5 text-gray-500">
-          <span
-            class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800"
+            {#if project.status.isActive}
+              <span
+                class="bg-emerald-100 text-emerald-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-emerald-200 dark:text-emerald-800"
+              >
+                <Icon icon="mdi:check" class="mr-1 w-3 h-3" />
+                Aktif
+              </span>
+            {:else}
+              <span
+                class="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800"
+              >
+                <Icon icon="mdi:cancel" class="mr-1 w-3 h-3" />
+                Tidak Aktif
+              </span>
+            {/if}
+          </div>
+          <h2
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
           >
-            <Icon icon="mdi:xml" class="mr-1 w-3 h-3" />
-            Website
-          </span>
-        </div>
-        <h2
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-          <a href="https://terminaltidar.id" target="_blank"
-            >Website Terminal Tidar Magelang</a
+            <a href={project.href} target="_blank" class="capitalize">
+              {project.title}
+            </a>
+          </h2>
+          <p
+            class="mb-5 font-light text-gray-500 dark:text-gray-400 first-letter:capitalize"
           >
-        </h2>
-        <p class="mb-5 font-light text-gray-500 dark:text-gray-400">
-          Website layanan publik dari Terminal Tipe A Tidar Magelang. Berisikan
-          berita-berita seputar kegiatan di dalam terminal dan data dari PO bus
-          di terminal.
-        </p>
-        <div class="flex justify-between items-center">
-          <a
-            href="https://terminaltidar.id"
-            class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
-            target="_blank"
-          >
-            Cek website
-            <Icon icon="mdi:arrow-right" class="ml-2 w-4 h-4" />
-          </a>
-        </div>
-      </article>
+            {project.desc}
+          </p>
+          <div class="flex justify-between items-center">
+            <a
+              href={project.href}
+              class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
+              target="_blank"
+            >
+              Cek website
+              <Icon icon="mdi:arrow-right" class="ml-2 w-4 h-4" />
+            </a>
+          </div>
+        </article>
+      {/each}
     </div>
   </div>
 </section>

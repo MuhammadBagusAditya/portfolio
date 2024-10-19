@@ -1,0 +1,61 @@
+{
+  "profileImg": "/my-photo.jpg",
+  "about": "Nama saya muhammad bagus aditya, seorang programmer freelancer lulusan SMK Telekomunikasi Tunas Harapan yang sedang mencari ilmu di Universitas Dian Nuswantoro (UDINUS) Semarang jurusan Sarjana Teknik Informatika. Saya mahir dalam menggunakan laravel dan beberapa framework javascript seperti vue js dan svelte js. Pernah mengikuti Lomba Kompetensi Siswa dan meraih juara 2 di bidang Web Technologies tingkat Provinsi Jawa Tengah.",
+  "skills": [
+    {
+      "icon": "mdi:xml",
+      "header": "Web Development",
+      "desc": "Saya menguasai dasar-dasar web development seperti HTML, CSS, dan Javascript. Saya juga dapat menggunakan library js dan Javascript Bundler seperti vite dan webpack."
+    },
+    {
+      "icon": "mdi:drawing",
+      "header": "Web Design",
+      "desc": "Saya dapat mendesain sebuah website menggunakan figma. Dapat bekerja sama secara realtime dengan tim design."
+    },
+    {
+      "icon": "mdi:laravel",
+      "header": "Laravel",
+      "desc": "Saya menguasai framework php Laravel, mulai dari routing, relationships, authentication, authorization hingga deployment. Saya juga dapat menggunakan stack populer TALL dan VILT."
+    },
+    {
+      "icon": "mdi:nodejs",
+      "header": "Node JS",
+      "desc": "Selain laravel, saya juga mampu menggunakan library node js seperti express js untuk membangun REST API."
+    },
+    {
+      "icon": "mdi:api",
+      "header": "Rest API",
+      "desc": "Saya dapat membuat sebuah aplikasi berbasis Rest API menggunakan Laravel dan express js. Disertai dengan authentication dan authorization serta assets handling."
+    },
+    {
+      "icon": "mdi:git",
+      "header": "Git dan Github",
+      "desc": "saya mampu menggunakan Git dan Github dengan baik untuk berkolaborasi dengan tim."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Website Merbabu360",
+      "desc": "Website untuk layanan booking villa dan camping. Dalam pembuatan website ini, saya berkonstribusi di bagian backend, dashboard, dan pemesanan villa.",
+      "href": "https://merbabu360.com",
+      "status": {
+        "type": "website",
+        "isActive": false
+      }
+    },
+    {
+      "title": "Website Terminal Tidar Magelang",
+      "desc": "Website layanan publik dari Terminal Tipe A Tidar Magelang. Berisikan berita-berita seputar kegiatan di dalam terminal dan data dari PO bus di terminal.",
+      "href": "https://terminaltidar.id",
+      "status": {
+        "type": "website",
+        "isActive": true
+      }
+    }
+  ],
+  "contacts": {
+    "whatsapp": "https://wa.me/895362099777",
+    "facebook": "https://www.facebook.com/profile.php?id=100041603658879",
+    "linkedin": "https://www.linkedin.com/in/muhammad-bagus-aditya-213868290/"
+  }
+}

@@ -20,15 +20,15 @@
       class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
     >
       <a
-        href="#"
-        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 gap-2"
+        href="https://wa.me/895362099777"
+        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center bg-emerald-600 hover:bg-emerald-700 text-gray-100 rounded-lg border border-emerald-300 focus:ring-4 focus:ring-emerald-100 dark:text-white dark:border-emerald-700 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800 gap-2"
       >
         <Icon icon="mdi:whatsapp" class="text-xl" />
         Hubungi saya
       </a>
 
       <a
-        href="#"
+        href="#about"
         class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 gap-2"
       >
         Lebih lanjut

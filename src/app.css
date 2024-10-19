@@ -7,3 +7,9 @@
     @apply scroll-smooth scroll-m-[4rem];
   }
 }
+
+@layer utilities {
+  .container {
+    @apply w-[95%] sm:w-[92.5%] md:w-[90%] lg:w-[87.5%] xl:w-[85%] max-w-[100rem];
+  }
+}
