@@ -19,6 +19,7 @@ const config = {
       handleHttpError: "warn",
       origin: "https://github.io",
     },
+    outDir: "docs",
   },
 };
 
