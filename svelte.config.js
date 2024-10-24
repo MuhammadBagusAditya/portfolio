@@ -15,6 +15,10 @@ const config = {
     paths: {
       base: "/portfolio",
     },
+    prerender: {
+      handleHttpError: "warn",
+      origin: "https://github.io",
+    },
   },
 };
 
