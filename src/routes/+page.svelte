@@ -5,6 +5,15 @@
   import Projects from "$lib/components/Home/Projects.svelte";
   import Contact from "$lib/components/Home/Contact.svelte";
   import Footer from "$lib/components/Home/Footer.svelte";
+  import AOS from "aos";
+  import "aos/dist/aos.css";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    AOS.init({
+      once: true,
+    });
+  });
 </script>
 
 <svelte:head>

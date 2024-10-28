@@ -1,6 +1,5 @@
 <script lang="ts">
   import "./../app.css";
-  import "flowbite";
 
   import Navbar from "$lib/components/Navbar.svelte";
 </script>

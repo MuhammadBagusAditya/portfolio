@@ -4,10 +4,11 @@
 </script>
 
 <section class="bg-gray-100 dark:bg-gray-900" id="about">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-    <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+  <div class="container py-6 md:py-8">
+    <div class="flex flex-col items-center gap-3 mb-4">
       <h2
-        class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        class="text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        data-aos="fade-down"
       >
         Tentang saya
       </h2>
@@ -19,10 +20,11 @@
           src={base + profileImg}
           alt="my profile"
           class="w-full max-w-[16rem] rounded-lg mb-4"
+          data-aos="flip-up"
         />
       </div>
 
-      <p class="lg:text-lg text-gray-700 text-justify">
+      <p class="lg:text-lg text-gray-700 text-justify" data-aos="flip-up">
         {about}
       </p>
     </div>

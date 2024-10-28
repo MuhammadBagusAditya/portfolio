@@ -4,10 +4,11 @@
 </script>
 
 <section class="bg-white dark:bg-gray-900" id="contact">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+  <div class="container py-6 md:py-8">
     <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
       <h2
         class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        data-aos="fade-down"
       >
         Hubungi saya
       </h2>
@@ -17,6 +18,8 @@
       <a
         href={contacts.whatsapp}
         class="inline-flex flex-col justify-center items-center w-fit mx-auto group"
+        data-aos="zoom-in"
+        data-aos-delay="0"
       >
         <Icon
           icon="mdi:whatsapp"
@@ -31,6 +34,8 @@
       <a
         href={contacts.facebook}
         class="inline-flex flex-col justify-center items-center w-fit mx-auto group"
+        data-aos="zoom-in"
+        data-aos-delay="100"
       >
         <Icon
           icon="mdi:facebook"
@@ -45,6 +50,8 @@
       <a
         href={contacts.linkedin}
         class="inline-flex flex-col justify-center items-center w-fit mx-auto group"
+        data-aos="zoom-in"
+        data-aos-delay="200"
       >
         <Icon
           icon="mdi:linkedin"

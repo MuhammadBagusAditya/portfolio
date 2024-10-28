@@ -36,6 +36,7 @@
   "projects": [
     {
       "title": "Website Merbabu360",
+      "imgSrc": "/merbabu360.png",
       "desc": "Website untuk layanan booking villa dan camping. Dalam pembuatan website ini, saya berkonstribusi di bagian backend, dashboard, dan pemesanan villa.",
       "href": "https://merbabu360.com",
       "status": {
@@ -45,6 +46,7 @@
     },
     {
       "title": "Website Terminal Tidar Magelang",
+      "imgSrc": "/terminal-tidar.png",
       "desc": "Website layanan publik dari Terminal Tipe A Tidar Magelang. Berisikan berita-berita seputar kegiatan di dalam terminal dan data dari PO bus di terminal.",
       "href": "https://terminaltidar.id",
       "status": {
