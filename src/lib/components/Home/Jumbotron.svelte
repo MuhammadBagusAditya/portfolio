@@ -1,6 +1,7 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
   import { Button } from "$lib/components/ui/button";
+  import { contacts } from "$lib/data/data.json";
 </script>
 
 <section class="bg-white dark:bg-gray-900" id="jumbotron">
@@ -25,7 +26,7 @@
       class="flex flex-col md:flex-row gap-3 justify-center items-stretch w-full"
     >
       <Button
-        href="https://wa.me/895362099777"
+        href={contacts.whatsapp}
         size="lg"
         class="bg-emerald-600 hover:bg-emerald-700"
         target="_blank"

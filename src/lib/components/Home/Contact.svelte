@@ -20,6 +20,7 @@
         class="inline-flex flex-col justify-center items-center w-fit mx-auto group"
         data-aos="zoom-in"
         data-aos-delay="0"
+        target="_blank"
       >
         <Icon
           icon="mdi:whatsapp"
@@ -36,6 +37,7 @@
         class="inline-flex flex-col justify-center items-center w-fit mx-auto group"
         data-aos="zoom-in"
         data-aos-delay="100"
+        target="_blank"
       >
         <Icon
           icon="mdi:facebook"
@@ -52,6 +54,7 @@
         class="inline-flex flex-col justify-center items-center w-fit mx-auto group"
         data-aos="zoom-in"
         data-aos-delay="200"
+        target="_blank"
       >
         <Icon
           icon="mdi:linkedin"
