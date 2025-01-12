@@ -8,7 +8,7 @@
   <Collapse.Root>
     <div class="container py-2 flex justify-between items-center">
       <a href="/" class="text-primary-foreground text-lg font-bold">
-        Muhammad Bagus Aditya
+        MyPortfolio
       </a>
 
       <div class="hidden md:flex">

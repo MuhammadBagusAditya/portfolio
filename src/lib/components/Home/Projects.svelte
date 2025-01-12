@@ -3,6 +3,8 @@
   import data from "$lib/data/data.json";
   import * as Card from "$lib/components/ui/card";
   import { Button } from "$lib/components/ui/button";
+
+  type Project = (typeof data.projects)[0];
 </script>
 
 <section class="bg-gray-100 dark:bg-gray-900" id="projects">
@@ -25,7 +27,7 @@
     </div>
 
     <div class="grid gap-8 lg:grid-cols-2">
-      {#each data.projects as project, i}
+      {#snippet card(project: Project, i: number)}
         <Card.Root data-aos="flip-left" data-aos-delay={i * 100}>
           <Card.Header>
             <img
@@ -35,7 +37,7 @@
             />
 
             <div
-              class="flex justify-start items-center gap-3 mb-5 text-gray-500"
+              class="flex justify-start items-center gap-3 mb-6 text-gray-500"
             >
               <span
                 class="bg-primary/20 text-primary text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800"
@@ -63,74 +65,27 @@
               {/if}
             </div>
 
-            <Card.Title>
+            <Card.Title class="pt-2">
               {project.title}
             </Card.Title>
           </Card.Header>
 
-          <Card.Content>
+          <Card.Content class="pt-2 pb-6">
             <p class="mb-3">{project.desc}</p>
-
-            <div class="flex justify-end">
-              <Button href={project.href} target="_blank">
-                Cek website
-                <Icon icon="mdi:arrow-right" class="ml-2 w-4 h-4" />
-              </Button>
-            </div>
           </Card.Content>
         </Card.Root>
-        <!-- <article
-          class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
-        >
-          <div class="flex justify-start items-center gap-3 mb-5 text-gray-500">
-            <span
-              class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800"
-            >
-              {#if project.status.type === "website"}
-                <Icon icon="mdi:xml" class="mr-1 w-3 h-3" />
-                Website
-              {/if}
-            </span>
+      {/snippet}
 
-            {#if project.status.isActive}
-              <span
-                class="bg-emerald-100 text-emerald-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-emerald-200 dark:text-emerald-800"
-              >
-                <Icon icon="mdi:check" class="mr-1 w-3 h-3" />
-                Aktif
-              </span>
-            {:else}
-              <span
-                class="bg-red-100 text-red-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-800"
-              >
-                <Icon icon="mdi:cancel" class="mr-1 w-3 h-3" />
-                Tidak Aktif
-              </span>
-            {/if}
-          </div>
-          <h2
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-          >
-            <a href={project.href} target="_blank" class="capitalize">
-              {project.title}
-            </a>
-          </h2>
-          <p
-            class="mb-5 font-light text-gray-500 dark:text-gray-400 first-letter:capitalize"
-          >
-            {project.desc}
-          </p>
-          <div class="flex justify-between items-center">
-            <a
-              href={project.href}
-              class="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
-              target="_blank"
-            >
-              Cek website
-              <Icon icon="mdi:arrow-right" class="ml-2 w-4 h-4" />
-            </a>
-          </div>
-        </article> -->
+      {#each data.projects as project, i}
+        {#if project.href !== "#"}
+          <a href={project.href}>
+            {@render card(project, i)}
+          </a>
+        {:else}
+          <span>
+            {@render card(project, i)}
+          </span>
+        {/if}
       {/each}
     </div>
   </div>

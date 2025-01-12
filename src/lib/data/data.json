@@ -38,7 +38,7 @@
       "title": "Website Merbabu360",
       "imgSrc": "/merbabu360.png",
       "desc": "Website untuk layanan booking villa dan camping. Dalam pembuatan website ini, saya berkonstribusi di bagian backend, dashboard, dan pemesanan villa.",
-      "href": "https://merbabu360.com",
+      "href": "#",
       "status": {
         "type": "website",
         "isActive": false
@@ -52,6 +52,36 @@
       "status": {
         "type": "website",
         "isActive": true
+      }
+    },
+    {
+      "title": "Website BambsArt Jepara",
+      "imgSrc": "/bambsartjepara.png",
+      "desc": "Website landing page untuk sebuah usaha yang melayani pembuatan lukisan custom sesuai dengan permintaan konsumen.",
+      "href": "https://bambsartjepara.com",
+      "status": {
+        "type": "website",
+        "isActive": true
+      }
+    },
+    {
+      "title": "Website MVilla",
+      "imgSrc": "/mvilla.png",
+      "desc": "Website ini hanya sebuah preview atau contoh, bukan website asli",
+      "href": "#",
+      "status": {
+        "type": "website",
+        "isActive": false
+      }
+    },
+    {
+      "title": "Website Eduplay",
+      "imgSrc": "/eduplay.png",
+      "desc": "Website ini hanya sebuah preview atau contoh yang saya gunakan untuk mengikuti sebuah lomba web development bertemakan platform e-learning.",
+      "href": "#",
+      "status": {
+        "type": "website",
+        "isActive": false
       }
     }
   ],
